@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<head>
+    <title>
+        URL SHORTENER
+    </title>
+</head>
+<div class="container" align="center">
+    <div class="box">
+    <h1 align="center"><b>URL SHORTENER APPLICATION</b></h1>
+    <form method="post">
+    {% csrf_token %}
+        <h1><i class="fas fa-link px-2"></i></h1>
+         <table align="center">
+                <tbody>
+                   <tr>
+                       <td><big><label for="long_url">Long URL:</label></big></td>
+                       <td><big><input type="url" placeholder="Enter the link here " name="long_url" id="long_url" required></big></td>
+                       <p align="center"><b>ShortURL is a free tool to shorten URLs and generate short link<br> URL shortener allows to create a shortened link making it easy to share</b></p>
+
+                   </tr>
+
+                   <tr>
+                       <td><Big><button><b>SHORTEN URL</b></button></Big></td>
+
+                   </tr>
+                </tbody>
+            </table>
+       <section>
+        <h2>Simple and fast URL shortener!</h2>
+            <p><b>ShortURL allows to shorten long links from <a href="https://www.instagram.com/" target="_blank">Instagram</a>, <a href="https://www.facebook.com/" target="_blank">Facebook</a>, <a href="https://www.youtube.com/" target="_blank">YouTube</a>, <a href="https://www.twitter.com/" target="_blank">Twitter</a>, <a href="https://www.linkedin.com/" target="_blank">Linked In</a>, <a href="https://www.whatsapp.com/" target="_blank">WhatsApp</a>, blogs and sites.Just paste the long URL and click the Shorten URL button. On the next page, copy the shortened URL and share it on sites, chat and emails.</b></p>
+        </section>
+        <table>
+            <tr>
+                <td><th><div class="icon"><img src=" https://upload.wikimedia.org/wikipedia/commons/1/13/Facebook_like_thumb.png" width="50px" height="50px"></div>
+                    <h3 class="aligncenter">Easy</h3>
+                        <p class="aligncenter">ShortURL is easy and fast<br> enter the long link to <br>get your shortened link.</p></th></td>
+
+                <td><th><div class="icon"><img src="data:image/png;base64,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" width="50px" height="50px"></div>
+                    <h3 class="aligncenter">Shortened</h3>
+                        <p class="aligncenter">Use any link<br> no matter what size<br>ShortURL always shortens.</p></th></td>
+
+                <td><th><div class="icon"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzaPjx6xpAgKQMl3DPGfkUsXU5Crw1z2rOszsu_5M&s" width="50px" height="50px"></div>
+                    <h3 class="aligncenter">Secure</h3>
+                        <p class="aligncenter">It is fast and secure<br> our service has HTTPS <br>protocol and data encryption.</p></th></td>
+                    </tr>
+                    <tr>
+                        <td><th><div class="icon"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTh3HH4fpekaKmkoaYr2ycmYhjLTQRZqpzxxQ117cw&s" width="50px" height="50px"></div>
+                    <h3 class="aligncenter">Statistics</h3>
+                <p class="aligncenter">Check the number of clicks <br>that your shortened URL received.</p></th></td>
+
+                <td><th><div class="icon"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvUIBzGGEy3KSo2ZhtKu0AHzNbufbA3IbhLg&usqp=CAU" width="50px" height="50px"></div>
+                    <h3 class="aligncenter">Reliable</h3>
+                    <p class="aligncenter">All links that try to disseminate <br>spam viruses and <br>malware are deleted.</p></th></td>
+
+                <td><th><div class="icon"><img src="https://w7.pngwing.com/pngs/142/566/png-transparent-responsive-web-design-handheld-devices-computer-icons-smartphone-tecnology-electronics-text-rectangle.png" width="50px" height="50px"></div>
+                    <h3 class="aligncenter">Devices</h3>
+                <p class="aligncenter">Compatible with smartphones<br>tablets and desktop.</p></th></td>
+                </tr>
+        </table>
+    </form>
+</div>
+</div>
+<style type="text/css">
+   .container{
+      background-color:pink;
+      width:1500px;
+      height:1500px;
+      font-weight: bold;
+      padding: 5px;
+      align="center";
+      }
+      .box{
+      background-color:grey;
+      width:500px;
+      height:240px;
+      font-weight: bold;
+      padding: 5px;
+      align="center";
+      }
+</style>
+</html>
